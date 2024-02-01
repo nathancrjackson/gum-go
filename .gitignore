@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+# Local files
+local/
+src/configuration.json
+src/gum.exe

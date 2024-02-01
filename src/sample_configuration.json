@@ -1,0 +1,19 @@
+{
+	"debug": true,
+	"protocols": [
+		{
+			"protocol": "gordp",
+			"cmd": [ "mstsc.exe", "{{ .OutputFile }}" ],
+			"outputfile": "./output.rdp",
+			"basefile": "./defaults.rdp",
+			"filedelimeter": ":",
+			"hostaddressfileline": ["full address", "s", "{{ .HostAddress }}"],
+			"usernamefileline": ["username", "s", "{{ .Username }}"],
+			"additionalfilelines": []
+		},
+		{
+			"protocol": "ping",
+			"cmd": [ "conhost", "ping", "-t", "{{ .HostAddress }}" ]
+		}
+	]
+}
